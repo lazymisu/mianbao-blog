@@ -15,7 +15,16 @@
             </td>
         </tr>
         <tr>
-            <td rowspan="3">
+            <td colspan="2" id="nav">
+                <a href="/">Home</a>
+                <a href="/about/">About</a>
+                <a href="/wikicats/">Wikicats</a>
+                <a href="/frogs-awards/">Frogs awards</a>
+                <a href="/historias-semanales/">Historias semanales</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
                 <aside>
                     {% for post in site.categories['wikicats']  %}
                         {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
@@ -50,15 +59,6 @@
                     {% endfor %}
                 </aside>
             </td>
-            <td id="nav">
-                <a href="/">Home</a>
-                <a href="/about/">About</a>
-                <a href="/wikicats/">Wikicats</a>
-                <a href="/frogs-awards/">Frogs awards</a>
-                <a href="/historias-semanales/">Historias semanales</a>
-            </td>
-        </tr>
-        <tr>
             <td>
                 <main>
                     <section>
@@ -103,7 +103,7 @@
             </td>
         </tr>
         <tr>
-            <td id="footer">
+            <td colspan="2" id="footer">
                 Copyright &copy; {{ site.title }}, All rights reserved. {{ site.url }}
             </td>
         </tr>

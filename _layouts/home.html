@@ -10,18 +10,21 @@
 <body>
     <table border="1">
         <tr>
-            <td>
-                <!-- empty -->
-            </td>
-            <td id="header">
+            <td colspan="3" id="header">
                 <img src="/assets/images/banner.jpg" alt="banner">
-            </td>
-            <td>
-                <!-- empty -->
             </td>
         </tr>
         <tr>
-            <td rowspan="3">
+            <td colspan="3" id="nav">
+                <a href="/">Home</a>
+                <a href="/about/">About</a>
+                <a href="/wikicats/">Wikicats</a>
+                <a href="/frogs-awards/">Frogs awards</a>
+                <a href="/historias-semanales/">Historias semanales</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
                 <aside>
                     contador de visitas
                 </aside>
@@ -32,23 +35,6 @@
                     chat latino
                 </aside>
             </td>
-            <td id="nav">
-                <a href="/">Home</a>
-                <a href="/about/">About</a>
-                <a href="/wikicats/">Wikicats</a>
-                <a href="/frogs-awards/">Frogs awards</a>
-                <a href="/historias-semanales/">Historias semanales</a>
-            </td>
-            <td rowspan="3">
-                <aside>
-                    frogs awards 2022
-                </aside>
-                <aside>
-                    pacman
-                </aside>
-            </td>
-        </tr>
-        <tr>
             <td>
                 <main>
                     <section>
@@ -67,9 +53,17 @@
                     </section>
                 </main>
             </td>
+            <td>
+                <aside>
+                    frogs awards 2022
+                </aside>
+                <aside>
+                    pacman
+                </aside>
+            </td>
         </tr>
         <tr>
-            <td id="footer">
+            <td colspan="3" id="footer">
                 Copyright &copy; {{ site.title }}, All rights reserved. {{ site.url }}
             </td>
         </tr>
