@@ -82,7 +82,12 @@
                                         <td>{{ post.mood }}</td>
                                     </tr>
                                     <tr>
-                                        <td colspan="2">like / dislike</td>
+                                        <td colspan="2">
+                                            <!-- LikeBtn.com BEGIN -->
+                                                <span class="likebtn-wrapper" data-identifier="{{ post.url }}"></span>
+                                                <script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>
+                                                <!-- LikeBtn.com END -->
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td colspan="2">comments</td>
