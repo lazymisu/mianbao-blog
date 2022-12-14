@@ -5,4 +5,4 @@
 layout: home
 ---
 
-welcome to page
+# Hi internet user, welcome to the best place in the world
