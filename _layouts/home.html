@@ -55,7 +55,15 @@
                         {{ content }}
                     </section>
                     <section>
-                        <p>anuncios</p>
+                        <h1>News</h1>
+                        <ul>
+                            {% for new in site.data.news %}
+                            <li>
+                                <small>{{ new.date }}</small>
+                                <p>{{ new.description }}</p>
+                            </li>
+                            {% endfor %}
+                        </ul>
                     </section>
                 </main>
             </td>
