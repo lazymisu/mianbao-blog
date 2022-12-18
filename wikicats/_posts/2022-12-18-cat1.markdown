@@ -1,0 +1,9 @@
+---
+layout: post
+date: 2022-12-18 00:05:36 -0500
+title: hot cat in the streeth
+image: \assets\images\Suprisecat.jpg
+mood: hot
+---
+
+This is a template for wikicats post.
