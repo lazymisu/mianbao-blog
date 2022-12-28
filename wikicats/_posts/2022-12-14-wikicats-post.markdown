@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 date: 2022-12-14 00:00:00 -0500
 title: Wikicats post!!!
 image: http://placekitten.com/300/300
