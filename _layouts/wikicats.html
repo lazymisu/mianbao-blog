@@ -5,27 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ site.title }}</title>
-    <link rel="stylesheet" href="/assets/css/home.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-    <table border="1">
+    <table>
         <tr>
-            <td colspan="2" id="header">
-                <img src="/assets/images/banner.jpg" alt="banner">
+            <td colspan="2">
+                {% include header.html %}
             </td>
         </tr>
         <tr>
-            <td colspan="2" id="nav">
-                <a href="/">Home</a>
-                <a href="/about/">About</a>
-                <a href="/wikicats/">Wikicats</a>
-                <a href="/frogs-awards/">Frogs awards</a>
-                <a href="/historias-semanales/">Historias semanales</a>
+            <td colspan="2">
+                {% include nav.html %}
             </td>
         </tr>
         <tr>
             <td>
-                <aside>
+                <aside style="width: 300px;">
                     {% for post in site.categories['wikicats']  %}
                         {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
                         {% capture this_month %}{{ post.date | date: "%B" }}{% endcapture %}
@@ -38,7 +34,7 @@
                         <ul>
                         {% endif %}
 
-                        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                        <li><a href="#{{ post.url }}">{{ post.title }}</a></li>
 
                         {% if forloop.last %}
                         </ul>
@@ -66,45 +62,52 @@
                     </section>
                     <section>
                         {% for post in site.categories['wikicats'] %}
-                            <article>
-                                <table width="100%" border="1">
+                            <article id="{{ post.url }}" class="wikicats-item">
+                                <table width="700px">
                                     <tr>
                                         <td colspan="2">
-                                            <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+                                            <h1><a href="#{{ post.url }}">{{ post.title }}</a></h1>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td style="width: 300px;"><img src="{{ post.image }}" alt="{{ post.title }}"></td>
+                                        <td><img src="{{ post.image }}" alt="{{ post.title }}" width="300px" height="300px"></td>
                                         <td>{{ post.content }}</td>
                                     </tr>
                                     <tr>
-                                        <td>{{ post.date }}</td>
-                                        <td>{{ post.mood }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2">
-                                            <!-- LikeBtn.com BEGIN -->
-                                                <span class="likebtn-wrapper" data-identifier="{{ post.url }}"></span>
-                                                <script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>
-                                                <!-- LikeBtn.com END -->
+                                        <td>
+                                            <p>
+                                                <b>date:</b> {{ post.date | date: "%Y-%m-%d" }}
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p>
+                                                <b>Mood:</b> {{ post.mood }}
+                                            </p>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td colspan="2">comments</td>
+                                        <td colspan="2">
+                                            <p>like / dislike</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <p>comments</p>
+                                        </td>
                                     </tr>
                                 </table>
                             </article>
-                            {% if forloop.last == false %}
-                                <hr>
-                            {% endif %}
+                            <div class="divider">
+                                <span>(=^･ω･^=)</span>
+                            </div>
                         {% endfor %}
                     </section>
                 </main>
             </td>
         </tr>
         <tr>
-            <td colspan="2" id="footer">
-                Copyright &copy; {{ site.title }}, All rights reserved. {{ site.url }}
+            <td colspan="2">
+                {% include footer.html %}
             </td>
         </tr>
     </table>

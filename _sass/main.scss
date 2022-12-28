@@ -30,9 +30,45 @@ a {
     margin-bottom: 16px;
 }
 
-// Components
+// Component
+#header, #nav, #footer {
+    text-align: center;
+}
+
+#footer {
+    color: $secondary_color;
+    font-size: .8em;
+}
+
 #frog-carousel {
     img {
         max-width: 250px;
     }
+}
+
+.divider {
+    margin: 32px 0px;
+    font-size: 14px;
+    font-family: Arial; 
+    text-align: center;
+    span {
+        display: inline-block;
+        width: 100px;
+        animation: rotating 10s linear infinite;
+    }
+}
+
+@keyframes rotating {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+// Wikicats
+
+.wikicats-item {
+    border: 1px solid $secondary_color;
 }
