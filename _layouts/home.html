@@ -8,31 +8,27 @@
     <link rel="stylesheet" href="/assets/css/home.css">
 </head>
 <body>
-    <table border="1">
+    <table>
         <tr>
-            <td colspan="3" id="header">
-                <img src="/assets/images/banner.jpg" alt="banner">
+            <td colspan="3">
+                {% include header.html %}
             </td>
         </tr>
         <tr>
-            <td colspan="3" id="nav">
-                <a href="/">Home</a>
-                <a href="/about/">About</a>
-                <a href="/wikicats/">Wikicats</a>
-                <a href="/frogs-awards/">Frogs awards</a>
-                <a href="/historias-semanales/">Historias semanales</a>
+            <td colspan="3">
+                {% include nav.html %}
             </td>
         </tr>
         <tr>
             <td>
-                <aside>
-                    contador de visitas
+                <aside class="mb">
+                    {% include counter.html %}
+                </aside>
+                <aside class="mb">
+                    {% include pet.html %}
                 </aside>
                 <aside>
-                    pets
-                </aside>
-                <aside>
-                    chat latino
+                    {% include chat.html %}
                 </aside>
             </td>
             <td>
@@ -54,17 +50,17 @@
                 </main>
             </td>
             <td>
-                <aside>
-                    frogs awards 2022
+                <aside class="mb">
+                    {% include frog-carousel.html %}
                 </aside>
                 <aside>
-                    pacman
+                    {% include pacman.html %}
                 </aside>
             </td>
         </tr>
         <tr>
-            <td colspan="3" id="footer">
-                Copyright &copy; {{ site.title }}, All rights reserved. {{ site.url }}
+            <td colspan="3">
+                {% include footer.html %}
             </td>
         </tr>
     </table>

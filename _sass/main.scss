@@ -1,8 +1,38 @@
-table td, table td * {
-    vertical-align: top;
-}
+// Constants
+$primary_color: #36204F;
+$secondary_color: #806B97;
+$tertiary_color: #AF93CF;
+$text_color: #FFFFFF;
 
+// General
 table {
     margin-left: auto;
     margin-right: auto;
+    border-spacing: 16px 0;
+
+    td, td * {
+        vertical-align: top;
+    }
+}
+
+body {
+    background-color: $primary_color;
+    color: $text_color;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a {
+    color: $tertiary_color;
+}
+
+// Utils
+.mb {
+    margin-bottom: 16px;
+}
+
+// Components
+#frog-carousel {
+    img {
+        max-width: 250px;
+    }
 }

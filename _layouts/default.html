@@ -8,19 +8,15 @@
     <link rel="stylesheet" href="/assets/css/home.css">
 </head>
 <body>
-    <table border="1">
+    <table>
         <tr>
-            <td colspan="2" id="header">
-                <img src="/assets/images/banner.jpg" alt="banner">
+            <td colspan="2">
+                {% include header.html %}
             </td>
         </tr>
         <tr>
-          <td id="nav">
-              <a href="/">Home</a>
-              <a href="/about/">About</a>
-              <a href="/wikicats/">Wikicats</a>
-              <a href="/frogs-awards/">Frogs awards</a>
-              <a href="/historias-semanales/">Historias semanales</a>
+          <td>
+            {% include nav.html %}
           </td>
         </tr>
         <tr>
@@ -29,8 +25,8 @@
           </td>
         </tr>
         <tr>
-            <td id="footer">
-                Copyright &copy; {{ site.title }}, All rights reserved. {{ site.url }}
+            <td>
+                {% include footer.html %}
             </td>
         </tr>
     </table>
